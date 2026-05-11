@@ -1,0 +1,45 @@
+.imgMe {
+  width: 592px;
+  height: auto;
+  border-radius: 24px;
+  display: block;
+}
+
+.divMeImg {
+  position: relative;
+  width: 592px;
+  background-color: #fff;
+  border-radius: 24px;
+  margin-top: 64px;
+}
+
+.imgMeText {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: rgba(87, 83, 77, 1);
+  width: 510px;
+  margin-top: 20px;
+  padding: 32px;
+}
+
+.imgTitle {
+  position: absolute;
+  bottom: 146px;
+  left: 24px;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 36px;
+  color: rgba(255, 255, 255, 1);
+  color: red;
+}
+
+.divSvg {
+  width: 64px;
+  border-radius: 16px;
+  height: 64px;
+  background-color: rgba(254, 154, 0, 1);
+  position: absolute;
+  top: 24px;
+  left: 24px;
+}

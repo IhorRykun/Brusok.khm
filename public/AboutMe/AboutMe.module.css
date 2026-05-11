@@ -1,0 +1,21 @@
+.sectionAboutMe {
+  padding: 128px 0;
+  background-color: rgba(255, 255, 255, 1);
+  margin: 0 auto;
+  width: 1280px;
+}
+
+.textAbout {
+  width: 668px;
+  margin-bottom: 68px;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.divContainerGap {
+  background-color: grey;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}

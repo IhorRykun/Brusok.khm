@@ -1,0 +1,11 @@
+.ServiceContainer {
+  position: relative;
+}
+
+.serviceImg {
+  width: 1216px;
+  max-height: 500px;
+  border-radius: 24px;
+  margin: 0 auto;
+  position: relative;
+}

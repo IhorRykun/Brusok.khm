@@ -1,0 +1,47 @@
+.mainContainer {
+  background-image: url("../../img//main_back.jpg");
+  padding: 221px 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.mainTitle {
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 auto;
+  width: 814px;
+}
+
+.mainTitle3 {
+  font-size: 86px;
+  font-weight: bold;
+  text-align: center;
+  color: #7b3306;
+  margin-top: 18px;
+  margin: 0 auto;
+  width: 751px;
+}
+
+.mainText {
+  margin-top: 18px;
+  font-size: 20px;
+  color: #364153;
+  text-align: center;
+  width: 751px;
+  margin: 0 auto;
+}
+
+.mainButton {
+  display: block;
+  text-align: center;
+  background-color: #e17100;
+  background-color: linear-gradient(#e17100, #bb4d00);
+
+  border-radius: 33;
+  padding: 16px 32px;
+  margin: 0 auto;
+  margin-top: 64px;
+  cursor: pointer;
+}
