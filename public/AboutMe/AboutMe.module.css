@@ -2,7 +2,6 @@
   padding: 128px 0;
   background-color: linear-gradient(to right, 000000.6, 000000.2, 000000);
   margin: 0 auto;
-  width: 1280px;
 }
 
 .textAbout {
@@ -19,5 +18,11 @@
 .divContainerGap {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-auto-rows: 462px;
+  gap: 32px;
+}
+
+.WrapperAboutBottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 80px;
 }

@@ -11,6 +11,7 @@ import { LuDollarSign } from "react-icons/lu";
 import { TbTruckDelivery } from "react-icons/tb";
 import { PiSpiralThin } from "react-icons/pi";
 import { Container } from "../Container/Container";
+import { AboutBottom } from "./AboutBottom/AboutBottom";
 
 export const AboutMe = () => {
   return (
@@ -102,6 +103,14 @@ export const AboutMe = () => {
             }
             childrenCenter={"img_wood"}
           />
+        </div>
+        <div className={styles.WrapperAboutBottom}>
+          <AboutBottom topChild={"15+"} bottomChild={"Років досвіду"} />
+          <AboutBottom
+            topChild={"1000+"}
+            bottomChild={"Задоволених клієнтів"}
+          />
+          <AboutBottom topChild={"100+"} bottomChild={"Гарантія якості"} />
         </div>
       </Container>
     </section>
