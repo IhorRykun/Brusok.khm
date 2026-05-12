@@ -1,6 +1,6 @@
 .imgMe {
   width: 592px;
-  height: auto;
+  height: 256px;
   border-radius: 24px;
   display: block;
 }
@@ -8,9 +8,10 @@
 .divMeImg {
   position: relative;
   width: 592px;
-  background-color: #fff;
+  background-color: grey;
   border-radius: 24px;
   margin-top: 64px;
+  padding-bottom: 32px; 
 }
 
 .imgMeText {
@@ -24,14 +25,14 @@
 }
 
 .imgTitle {
+  display: block;
   position: absolute;
-  bottom: 146px;
+  bottom: 168px;
   left: 24px;
   font-size: 30px;
   font-weight: 400;
   line-height: 36px;
   color: rgba(255, 255, 255, 1);
-  color: red;
 }
 
 .divSvg {

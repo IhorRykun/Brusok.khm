@@ -1,22 +1,24 @@
 .serviceTitle {
-  position: absolute;
-  bottom: 92px;
-  left: 176px;
   font-size: 36px;
   font-weight: 700;
   line-height: 40px;
   letter-spacing: 0.9px;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 1);
+  margin-bottom: 19px;
+  color: red;
 }
 
 .serviceText {
-  position: absolute;
-  bottom: 8px;
-  left: 176px;
   font-size: 20px;
   font-weight: 400;
   line-height: 32.5px;
   color: rgba(255, 255, 255, 1);
   width: 640px;
+  color: red;
+}
+.divContainerService {
+  position: absolute;
+  bottom: 20px;
+  left: 122px;
 }

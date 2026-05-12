@@ -5,7 +5,7 @@ import { ServiceContainerText } from "./ServiceContainerText/ServiceContainerTex
 export const ServiceImg = ({ props, children }) => {
   return (
     <div className={styles.ServiceContainer}>
-      <Image className={styles.serviceImg} src={props} alt={children} />
+      <Image className={styles.imgService} src={props} alt={children} />
       <ServiceContainerText
         topChild={"Покрівельні роботи"}
         bottomChild={
