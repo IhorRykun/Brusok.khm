@@ -26,6 +26,7 @@ export const AboutMe = () => {
           <ContainerMeImg
             props={img_1}
             children={"Висока якість матеріалів"}
+            style={{ backgroundColor: "blue" }}
             bottomChild={
               <PiMedalThin
                 style={{

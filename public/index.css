@@ -1,9 +1,10 @@
 @import-normalize;
-@import-normalize;
 
 body {
   font-family: sans-serif;
   line-height: 1.5;
+  -webkit-text-size-adjust: none;
+  box-sizing: border-box;
 }
 
 h1,
@@ -28,3 +29,6 @@ img {
   height: auto;
 }
 
+.SeconColor {
+  color: orange;
+}

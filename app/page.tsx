@@ -5,11 +5,16 @@ import { AboutMe } from "../public/AboutMe/AboutMe";
 import "../public/index.css";
 import { FormSection } from "../public/FormSection/FormSection";
 import { Footer } from "../public/Footer/Footer";
+
+
 export default function Home() {
   return (
     <>
       <Header />
-      <main>
+      <main
+        style={{
+          background: "linear-gradient(to #000000.6, #000000.2, #000000)"
+        }}>
         <LeadMain />
         <Service />
         <AboutMe />
