@@ -12,33 +12,55 @@ import Link from "next/link";
 import { LiaMobileSolid } from "react-icons/lia";
 import { HiOutlineMail } from "react-icons/hi";
 import { TfiLocationPin } from "react-icons/tfi";
+import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
+import OptionsCarts from "../../optionsMaps";
 
+const APY_keY = process.env.APY_KEY;
 const containerStyle = {
-  width: "100%",
-  height: "500px"
+  width: 1216,
+  height: 452
+};
+
+const mapOptions = {
+  disableDefaultUI: true, // прибрати всі стандартні кнопки
+
+  zoomControl: true, // залишити zoom + -
+  fullscreenControl: false,
+  streetViewControl: false,
+  mapTypeControl: false,
+
+  clickableIcons: false, // прибрати POI іконки
+  keyboardShortcuts: false,
+
+  styles: [
+    {
+      featureType: "poi",
+      stylers: [{ visibility: "off" }]
+    },
+    {
+      featureType: "transit",
+      stylers: [{ visibility: "off" }]
+    }
+  ]
 };
 
 const center = {
-  lat: 50.4501,
-  lng: 30.5234
+  lat: 49.474933,
+  lng: 27.043817
 };
-function MyMap() {
-  // Загрузка API
-  const { isLoaded } = useJsApiLoader({
-    id: 'google-map-script',
-    googleMapsApiKey: "YOUR_API_KEY" // Вставьте свой ключ
-  });
 
-  return isLoaded ? (
-    <GoogleMap
-      mapContainerStyle={containerStyle}
-      center={center}
-      zoom={10}
-    >
-      {/* Маркер на карте */}
-      <Marker position={center} />
-    </GoogleMap>
-  ) : <></>;
+export default function MapComponent() {
+  return (
+    <LoadScript googleMapsApiKey={APY_keY}>
+      <GoogleMap
+        mapContainerStyle={containerStyle}
+        center={center}
+        zoom={13}
+        options={OptionsCarts}>
+        <Marker position={center} />
+      </GoogleMap>
+    </LoadScript>
+  );
 }
 export const Footer = () => {
   return (
@@ -140,7 +162,9 @@ export const Footer = () => {
         </div>
         <div>
           <h3>Наше розташування</h3>
-          <div></div>
+          <div>
+            <MapComponent />
+          </div>
         </div>
       </Container>
     </section>

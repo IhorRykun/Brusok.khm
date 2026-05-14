@@ -1,6 +1,7 @@
 import { Container } from "../Container/Container";
 import styles from "./LeadMain.module.css";
 import Image from "next/image";
+import { FaLongArrowAltRight } from "react-icons/fa";
 
 export const LeadMain = () => {
   return (
@@ -13,7 +14,10 @@ export const LeadMain = () => {
           підходять для будівництва, ремонту та оздоблення. Ми працюємо згідно з
           принципів якості та професіоналізму.
         </p>
-        <button className={styles.mainButton}>Зв'язатися з нами</button>
+        <button className={styles.mainButton}>
+          Зв'язатися з нами{" "}
+          <FaLongArrowAltRight className={styles.mainButtonArrow} />
+        </button>
       </Container>
     </main>
   );

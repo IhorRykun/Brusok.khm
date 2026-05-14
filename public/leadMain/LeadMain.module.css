@@ -34,14 +34,35 @@
 }
 
 .mainButton {
-  display: block;
+  display: flex;
+  align-items: center;
   text-align: center;
-  background-color: #e17100;
-  background-color: linear-gradient(#e17100, #bb4d00);
+  background-color: #fe9a00;
 
   border-radius: 33;
   padding: 16px 32px;
   margin: 0 auto;
   margin-top: 64px;
   cursor: pointer;
+  color: #fff;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mainButtonArrow {
+  margin-left: 8px;
+  width: 14px;
+}
+
+.mainButton:hover,
+.mainButton:focus {
+  color: #fe9a00;
+  background-color: #fff;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: 1px solid #fe9a00;
+}
+
+.mainButton:hover .mainButtonArrow,
+.mainButton:hover .mainButtonArrow {
+  color: #fe9a00;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
