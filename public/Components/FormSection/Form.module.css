@@ -106,21 +106,55 @@
   cursor: pointer;
 }
 
-.inputCheckBox {
-  display: flex;
-  cursor: pointer;
-  padding-left: 32px;
+.checkboxBlock {
   margin-top: 30px;
   margin-bottom: 12px;
 }
 
-.labelCheckBox {
-  position: absolute;
-  bottom: 152px;
-  left: 58px;
+.inputCheckBox {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
   cursor: pointer;
-  width: 16px;
-  height: 16px;
+  max-width: 990px;
+  line-height: 1.5;
+}
+
+.labelCheckBox {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  margin-top: 3px;
+  cursor: pointer;
+  accent-color: #fe9a00;
+}
+
+.fieldError {
+  margin: 6px 0 0;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #dc2626;
+}
+
+.inputError {
+  border-color: #dc2626 !important;
+}
+
+.formStatusSuccess {
+  margin-top: 16px;
+  font-size: 16px;
+  color: #15803d;
+}
+
+.formStatusError {
+  margin-top: 16px;
+  font-size: 16px;
+  color: #dc2626;
+}
+
+.ButtonForm:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
 }
 
 .ButtonForm {

@@ -1,0 +1,24 @@
+.slider {
+  width: 100%;
+  max-width: 1216px;
+  margin: 0 auto;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.slide {
+  height: auto;
+}
+
+.slider :global(.swiper-button-prev),
+.slider :global(.swiper-button-next) {
+  color: rgba(255, 255, 255, 1);
+}
+
+.slider :global(.swiper-pagination-bullet) {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.slider :global(.swiper-pagination-bullet-active) {
+  background: rgba(255, 255, 255, 1);
+}

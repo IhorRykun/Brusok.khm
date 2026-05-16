@@ -1,10 +1,9 @@
-import { SectionTitleH2 } from "../SectionTitleH2/SectionTitleH2";
 import styles from "./AboutMe.module.css";
 import { ContainerMeImg } from "./AboutMeImg/AboutMeImg";
-import img_1 from "../../img/about/img_1 x1.jpg";
-import img_2 from "../../img/about/img_2 x1.jpg";
-import img_3 from "../../img/about/img_3 x1.jpg";
-import img_4 from "../../img/about/img_4 x1.jpg";
+import img_1 from "../../../img/about/img_1 x1.jpg";
+import img_2 from "../../../img/about/img_2 x1.jpg";
+import img_3 from "../../../img/about/img_3 x1.jpg";
+import img_4 from "../../../img/about/img_4 x1.jpg";
 
 import { PiMedalThin } from "react-icons/pi";
 import { LuDollarSign } from "react-icons/lu";
@@ -12,6 +11,7 @@ import { TbTruckDelivery } from "react-icons/tb";
 import { PiSpiralThin } from "react-icons/pi";
 import { Container } from "../Container/Container";
 import { AboutBottom } from "./AboutBottom/AboutBottom";
+import { SectionTitleH2 } from "../../SectionTitleH2/SectionTitleH2";
 
 export const AboutMe = () => {
   return (

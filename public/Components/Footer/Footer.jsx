@@ -13,7 +13,7 @@ import { LiaMobileSolid } from "react-icons/lia";
 import { HiOutlineMail } from "react-icons/hi";
 import { TfiLocationPin } from "react-icons/tfi";
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
-import OptionsCarts from "../../optionsMaps";
+import OptionsCarts from "../../../optionsMaps";
 
 const APY_keY = process.env.APY_KEY;
 const containerStyle = {
