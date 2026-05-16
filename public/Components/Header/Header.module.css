@@ -14,17 +14,50 @@
 
 .headerList {
   display: flex;
-  color: 364153;
+  color: #364153;
   letter-spacing: 0.7;
   font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
   margin-left: auto;
 }
 
-.headerItem {
+.headerLink {
   margin-right: 30px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.headerItem:last-child {
+.headerLink:last-child {
   margin-right: 0;
+}
+
+.headerLink {
+  position: relative;
+  color: #364153;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.headerLink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+
+  width: 0;
+  height: 2px;
+
+  background: #ffb800;
+
+  transition: width 0.3s ease;
+}
+
+.headerLink:hover::after,
+.headerLink:focus-visible::after {
+  width: 100%;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.headerLink:focus,
+.headerLink:hover {
+  color: #ffb800;
 }

@@ -11,16 +11,16 @@ export const Header = () => {
             <h2 className={styles.headerTitle}>BRUSOK</h2>
           </Link>
           <ul className={styles.headerList}>
-            <Link href="/about">
+            <Link href="/about" className={styles.headerLink}>
               <li className={styles.headerItem}>Про нас</li>
             </Link>
-            <Link href="/wood">
+            <Link href="/wood" className={styles.headerLink}>
               <li className={styles.headerItem}>Пилометріали</li>
             </Link>
-            <Link href="/works">
+            <Link href="/works" className={styles.headerLink}>
               <li className={styles.headerItem}>Покрівельні роботи</li>
             </Link>
-            <Link href="delivery">
+            <Link href="delivery" className={styles.headerLink}>
               <li className={styles.headerItem}>Доставка</li>
             </Link>
           </ul>
