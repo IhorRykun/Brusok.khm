@@ -17,7 +17,7 @@ export async function AboutPages() {
         <AboutMe />
         <FormSection />
       </main>
-      <footer>
+      <footer id="footer">
         <Footer />
       </footer>
     </>

@@ -7,7 +7,7 @@ export const Header = () => {
     <header className={styles.header}>
       <Container>
         <nav className={styles.ContainerFlex}>
-          <Link href="/about">
+          <Link href="/about" className={styles.headerLink}>
             <h2 className={styles.headerTitle}>BRUSOK</h2>
           </Link>
           <ul className={styles.headerList}>

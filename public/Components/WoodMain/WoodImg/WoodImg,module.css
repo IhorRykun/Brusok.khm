@@ -1,0 +1,19 @@
+.imgWood {
+  width: 552px;
+  height: 400px;
+  border-radius: 24px;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: 0.75px;
+  text-transform: uppercase;
+}
+
+.woodButton {
+  width: 332px;
+  border: 1px solid black;
+  border-radius: 33px;
+}

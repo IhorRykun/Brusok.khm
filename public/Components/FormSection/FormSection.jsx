@@ -2,7 +2,7 @@
 
 import { Container } from "../Container/Container";
 import { SectionTitleH2 } from "../../SectionTitleH2/SectionTitleH2";
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import { Formik, Form, Field } from "formik";
 import styles from "./Form.module.css";
 import { FaRegUser } from "react-icons/fa";
 import { MdOutlineMail } from "react-icons/md";
@@ -13,11 +13,11 @@ import {
   contactFormInitialValues,
 } from "../../../lib/contactValidation";
 
-const FieldError = ({ name }) => (
-  <ErrorMessage name={name}>
-    {(message) => <p className={styles.fieldError}>{message}</p>}
-  </ErrorMessage>
-);
+const FieldError = ({ name, touched, errors }) => {
+  return touched[name] && errors[name] ? (
+    <p className={styles.fieldError}>{errors[name]}</p>
+  ) : null;
+};
 
 export const FormSection = () => {
   const handleSubmit = async (values, { setSubmitting, resetForm, setStatus }) => {
@@ -58,65 +58,76 @@ export const FormSection = () => {
           initialValues={contactFormInitialValues}
           validationSchema={contactFormSchema}
           onSubmit={handleSubmit}
+          validateOnMount
           validateOnBlur
           validateOnChange
         >
-          {({ isSubmitting, status, touched, errors }) => (
+          {({ isSubmitting, status, touched, errors, isValid }) => (
             <Form className={styles.Forma} noValidate>
-              <label className={styles.labelName} htmlFor="userName">
-                <FaRegUser className={styles.labelSVG_size} />
-                Ім'я
-              </label>
-              <Field
-                className={`${styles.inputName} ${touched.name && errors.name ? styles.inputError : ""}`}
-                type="text"
-                name="name"
-                id="userName"
-                placeholder="Ваше ім'я"
-              />
-              <FieldError name="name" />
+              <div className={styles.formRow}>
+                <div className={styles.fieldGroup}>
+                  <label className={styles.fieldLabel} htmlFor="userName">
+                    <FaRegUser className={styles.labelSVG_size} />
+                    Ім'я
+                  </label>
+                  <FieldError name="name" touched={touched} errors={errors} />
+                  <Field
+                    className={`${styles.inputName} ${touched.name && errors.name ? styles.inputError : ""}`}
+                    type="text"
+                    name="name"
+                    id="userName"
+                    placeholder="Ваше ім'я"
+                  />
+                </div>
+                <div className={styles.fieldGroup}>
+                  <label className={styles.fieldLabel} htmlFor="userEmail">
+                    <MdOutlineMail className={styles.labelSVG_size} />
+                    Email
+                  </label>
+                  <FieldError name="email" touched={touched} errors={errors} />
+                  <Field
+                    className={`${styles.inputEmail} ${touched.email && errors.email ? styles.inputError : ""}`}
+                    type="email"
+                    id="userEmail"
+                    name="email"
+                    placeholder="Ваш @Email"
+                  />
+                </div>
+              </div>
 
-              <label className={styles.labelEmail} htmlFor="userEmail">
-                <MdOutlineMail className={styles.labelSVG_size} />
-                Email
-              </label>
-              <Field
-                className={`${styles.inputEmail} ${touched.email && errors.email ? styles.inputError : ""}`}
-                type="email"
-                id="userEmail"
-                name="email"
-                placeholder="Ваш @Email"
-              />
-              <FieldError name="email" />
+              <div className={styles.fieldGroupFull}>
+                <label className={styles.fieldLabel} htmlFor="userTel">
+                  <BsTelephone className={styles.labelSVG_size} />
+                  Телефон
+                </label>
+                <FieldError name="tel" touched={touched} errors={errors} />
+                <Field
+                  type="tel"
+                  name="tel"
+                  id="userTel"
+                  placeholder="0971234567"
+                  className={`${styles.inputMobile} ${touched.tel && errors.tel ? styles.inputError : ""}`}
+                />
+              </div>
 
-              <label className={styles.labelMobile} htmlFor="userTel">
-                <BsTelephone className={styles.labelSVG_size} />
-                Телефон
-              </label>
-              <Field
-                type="tel"
-                name="tel"
-                id="userTel"
-                placeholder="0971234567"
-                className={`${styles.inputMobile} ${touched.tel && errors.tel ? styles.inputError : ""}`}
-              />
-              <FieldError name="tel" />
-
-              <label htmlFor="userText" className={styles.labelTexteria}>
-                <FiMessageSquare className={styles.labelSVG_size} />
-                Повідомлення
-              </label>
-              <Field
-                as="textarea"
-                className={`${styles.inputTexteria} ${touched.userText && errors.userText ? styles.inputError : ""}`}
-                id="userText"
-                name="userText"
-                placeholder="Ваше повідомлення (необовʼязково)"
-                rows={4}
-              />
-              <FieldError name="userText" />
+              <div className={styles.fieldGroupFull}>
+                <label className={styles.fieldLabel} htmlFor="userText">
+                  <FiMessageSquare className={styles.labelSVG_size} />
+                  Повідомлення
+                </label>
+                <FieldError name="userText" touched={touched} errors={errors} />
+                <Field
+                  as="textarea"
+                  className={`${styles.inputTexteria} ${touched.userText && errors.userText ? styles.inputError : ""}`}
+                  id="userText"
+                  name="userText"
+                  placeholder="Ваше повідомлення (необовʼязково)"
+                  rows={4}
+                />
+              </div>
 
               <div className={styles.checkboxBlock}>
+                <FieldError name="toggle" touched={touched} errors={errors} />
                 <label className={styles.inputCheckBox} htmlFor="consentToggle">
                   <Field
                     type="checkbox"
@@ -128,7 +139,6 @@ export const FormSection = () => {
                     Я даю згоду на передачу та обробку моїх персональних даних
                   </span>
                 </label>
-                <FieldError name="toggle" />
               </div>
 
               {status?.success && (
@@ -145,7 +155,7 @@ export const FormSection = () => {
               <button
                 type="submit"
                 className={styles.ButtonForm}
-                disabled={isSubmitting}
+                disabled={isSubmitting || !isValid}
               >
                 {isSubmitting ? "Надсилання..." : "Надіслати"}
               </button>

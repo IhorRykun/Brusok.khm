@@ -1,0 +1,15 @@
+.sectionMain {
+  padding: 100px 0;
+  background-color: rgba(255, 251, 235, 1);
+}
+
+.mainText {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 29.25px;
+  color: rgba(54, 65, 83, 1);
+
+  width: 762px;
+  text-align: center;
+  margin: 0 auto;
+}

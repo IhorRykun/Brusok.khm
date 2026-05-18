@@ -1,12 +1,11 @@
 import { Footer } from "../../public/Components/Footer/Footer";
 import { Header } from "../../public/Components/Header/Header";
-
-export default function delivery() {
+import { WoodMain } from "../../public/Components/WoodMain/WoodMain";
+export default function Wood() {
   return (
     <>
       <Header />
-      <h2>Delivery</h2>
-
+      <WoodMain />
       <Footer />
     </>
   );

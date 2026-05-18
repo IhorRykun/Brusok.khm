@@ -14,10 +14,10 @@ export const LeadMain = () => {
           підходять для будівництва, ремонту та оздоблення. Ми працюємо згідно з
           принципів якості та професіоналізму.
         </p>
-        <button className={styles.mainButton}>
+        <a href="#footer" className={styles.mainButton}>
           Зв'язатися з нами{" "}
           <FaLongArrowAltRight className={styles.mainButtonArrow} />
-        </button>
+        </a>
       </Container>
     </main>
   );

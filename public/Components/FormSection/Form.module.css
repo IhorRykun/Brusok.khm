@@ -49,15 +49,11 @@
   border-radius: 16px;
   border: 1px solid rgba(229, 231, 235, 1);
   padding: 16px;
-
-  margin-top: 52px;
   cursor: pointer;
 }
 .inputTexteria {
   width: 990px;
   height: 122px;
-  margin-top: 52px;
-
   font-size: 16px;
   font-weight: 400;
   color: rgba(10, 10, 10, 0.5);
@@ -65,45 +61,44 @@
   border: 1px solid rgba(229, 231, 235, 1);
   padding: 8px 12px 12px 12px;
   cursor: pointer;
+  resize: none;
 }
 
-.labelEmail {
+.fieldGroup {
+  position: relative;
+  width: 484px;
+  margin-bottom: 24px;
+}
+
+.fieldGroupFull {
+  position: relative;
+  width: 990px;
+  margin-bottom: 24px;
+}
+
+.formRow {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.fieldLabel {
   display: flex;
   align-items: center;
   gap: 12px;
-  position: absolute;
-  top: 16px;
-  right: 470px;
   cursor: pointer;
+  margin-bottom: 12px;
 }
 
-.labelName {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  position: absolute;
-  top: 16px;
-  left: 58px;
-  cursor: pointer;
-}
-
-.labelMobile {
-  display: flex;
-  align-items: center;
-  position: absolute;
-  top: 116px;
-  left: 58px;
-  cursor: pointer;
-}
-
+.labelEmail,
+.labelName,
+.labelMobile,
 .labelTexteria {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  position: absolute;
-  top: 222px;
-  left: 58px;
-  cursor: pointer;
+  display: block;
+  position: static;
+  top: auto;
+  left: auto;
+  right: auto;
 }
 
 .checkboxBlock {
@@ -122,11 +117,57 @@
 
 .labelCheckBox {
   flex-shrink: 0;
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   margin-top: 3px;
   cursor: pointer;
-  accent-color: #fe9a00;
+  appearance: none;
+  border: 2px solid rgba(229, 231, 235, 1);
+  border-radius: 10px;
+  background-color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.labelCheckBox::after {
+  content: "";
+  width: 6px;
+  height: 10px;
+  border-right: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  transform: rotate(45deg);
+  opacity: 0;
+  transition:
+    opacity 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.labelCheckBox:checked {
+  background-color: #fe9a00;
+  border-color: #fe9a00;
+}
+
+.labelCheckBox:checked::after {
+  opacity: 1;
+  border-color: #fff;
+}
+
+.labelCheckBox:disabled {
+  background-color: #f3f4f6;
+  border-color: #d1d5db;
+  cursor: not-allowed;
+}
+
+.inputCheckBox span {
+  color: #0a0a0a;
+}
+
+.consentTextDisabled {
+  color: #9ca3af;
 }
 
 .fieldError {

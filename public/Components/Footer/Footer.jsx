@@ -15,7 +15,7 @@ import { TfiLocationPin } from "react-icons/tfi";
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 import OptionsCarts from "../../../optionsMaps";
 
-const APY_keY = process.env.APY_KEY;
+const APY_keY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
 const containerStyle = {
   width: 1216,
   height: 452
@@ -137,25 +137,40 @@ export const Footer = () => {
             <h3 className={styles.SocailTitle}>Соціальні мережі</h3>
             <ul className={styles.social_list}>
               <li className={styles.social_item}>
-                <Link href="./" replace>
+                <a
+                  href="https://www.instagram.com/brusok.khm/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.social_link}
+                >
                   <IoLogoInstagram className={styles.socialSvg} />
-                </Link>
+                </a>
               </li>
               <li className={styles.social_item}>
-                <Link href="./" replace>
+                <a
+                  href="https://www.facebook.com/Brusok.khm/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.social_link}
+                >
                   <FaFacebookF className={styles.socialSvg} />
-                </Link>
+                </a>
               </li>
 
               <li className={styles.social_item}>
-                <Link href="./" replace>
+                <a href="./" className={styles.social_link}>
                   <FaTiktok className={styles.socialSvg} />
-                </Link>
+                </a>
               </li>
               <li className={styles.social_item}>
-                <Link href="./" replace>
+                <a
+                  href="https://t.me/ihorrykun"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.social_link}
+                >
                   <PiTelegramLogoFill className={styles.socialSvg} />
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
