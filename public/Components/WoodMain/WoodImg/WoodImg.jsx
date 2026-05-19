@@ -1,11 +1,17 @@
-import Image from "next/image";
+"use client";
 
-export const WoodMainImg = ({ props, children, title, description }) => {
+import { useState } from "react";
+import Image from "next/image";
+import styles from "./WoodImg.module.css";
+
+export const WoodMainImg = ({ src, alt, title, description, children }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
-    <>
-      <Image src={props} alt={children} className={styles.imgWood} />
+    <div className={styles.card}>
+      <Image src={src} alt={alt} className={styles.imgWood} />
       <h3 className={styles.title}>{title}</h3>
       <button className={styles.woodButton}>{description}</button>
-    </>
+    </div>
   );
 };

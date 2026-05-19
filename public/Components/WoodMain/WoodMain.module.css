@@ -3,6 +3,14 @@
   background-color: rgba(255, 251, 235, 1);
 }
 
+.mainWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 24px;
+}
+
 .mainText {
   font-weight: 400;
   font-size: 18px;
@@ -10,6 +18,5 @@
   color: rgba(54, 65, 83, 1);
 
   width: 762px;
-  text-align: center;
   margin: 0 auto;
 }

@@ -9,7 +9,7 @@ export const ContainerMeImg = ({
   childrenCenter
 }) => {
   return (
-    <div className={styles.divMeImg}>
+    <div className={styles.divMeImg} tabIndex={0} role="group">
       <Image className={styles.imgMe} src={props} alt={childrenCenter} />
       <h3 className={styles.imgTitle}>{children}</h3>
       <p className={styles.imgMeText}>{topChild}</p>

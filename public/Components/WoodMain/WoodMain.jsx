@@ -1,5 +1,6 @@
 import { SectionTitleH2 } from "../../SectionTitleH2/SectionTitleH2";
 import { Container } from "../Container/Container";
+import { WoodMainImgWrapper } from "./WoodMainImg/WoodImgWrapper";
 import styles from "./WoodMain.module.css";
 
 export const WoodMain = () => {
@@ -20,6 +21,7 @@ export const WoodMain = () => {
               екологічність нашої продукції.
             </p>
           </div>
+          <WoodMainImgWrapper />
         </Container>
       </section>
     </main>

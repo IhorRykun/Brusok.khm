@@ -35,11 +35,31 @@ export const Footer = () => {
           <div className={styles.diContainerFlex_second}>
             <h3 className={styles.divContainerFlex_second_Title}>Навігація</h3>
             <ul className={styles.AboutList}>
-              <li className={styles.AboutItem}>Про нас</li>
-              <li className={styles.AboutItem}>Пиломатеріали</li>
-              <li className={styles.AboutItem}>Покрівельні роботи</li>
-              <li className={styles.AboutItem}>Доставка</li>
-              <li className={styles.AboutItem}>Контакти</li>
+              <li>
+                <Link href="/about" className={styles.AboutItem}>
+                  Про нас
+                </Link>
+              </li>
+              <li>
+                <Link href="/wood" className={styles.AboutItem}>
+                  Пиломатеріали
+                </Link>
+              </li>
+              <li>
+                <Link href="/works" className={styles.AboutItem}>
+                  Покрівельні роботи
+                </Link>
+              </li>
+              <li>
+                <Link href="/delivery" className={styles.AboutItem}>
+                  Доставка
+                </Link>
+              </li>
+              <li>
+                <Link href="/about#footer" className={styles.AboutItem}>
+                  Контакти
+                </Link>
+              </li>
             </ul>
           </div>
 
