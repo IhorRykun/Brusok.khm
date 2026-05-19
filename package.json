@@ -9,7 +9,6 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@react-google-maps/api": "^2.20.8",
     "@react-icons/all-files": "^4.1.0",
     "formik": "^2.4.9",
     "leaflet": "^1.9.4",

@@ -193,9 +193,15 @@
   color: #dc2626;
 }
 
-.ButtonForm:disabled {
-  opacity: 0.7;
+.ButtonForm:disabled,
+.ButtonForm:disabled:hover,
+.ButtonForm:disabled:focus {
+  opacity: 0.45;
   cursor: not-allowed;
+  color: #fff;
+  background-color: #fe9a00;
+  outline: none;
+  pointer-events: none;
 }
 
 .ButtonForm {

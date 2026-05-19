@@ -11,6 +11,7 @@ import { BsTelephone } from "react-icons/bs";
 import {
   contactFormSchema,
   contactFormInitialValues,
+  isContactFormValid,
 } from "../../../lib/contactValidation";
 
 const FieldError = ({ name, touched, errors }) => {
@@ -62,7 +63,10 @@ export const FormSection = () => {
           validateOnBlur
           validateOnChange
         >
-          {({ isSubmitting, status, touched, errors, isValid }) => (
+          {({ isSubmitting, status, touched, errors, values }) => {
+            const canSubmit = isContactFormValid(values);
+
+            return (
             <Form className={styles.Forma} noValidate>
               <div className={styles.formRow}>
                 <div className={styles.fieldGroup}>
@@ -155,12 +159,14 @@ export const FormSection = () => {
               <button
                 type="submit"
                 className={styles.ButtonForm}
-                disabled={isSubmitting || !isValid}
+                disabled={isSubmitting || !canSubmit}
+                aria-disabled={isSubmitting || !canSubmit}
               >
                 {isSubmitting ? "Надсилання..." : "Надіслати"}
               </button>
             </Form>
-          )}
+            );
+          }}
         </Formik>
       </Container>
     </section>

@@ -1,0 +1,61 @@
+.mapWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1216px;
+  margin: 0 auto;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #1a1a1a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 0 48px rgba(0, 0, 0, 0.35);
+}
+
+.mapContainer {
+  width: 100%;
+  height: 500px;
+  z-index: 0;
+}
+
+.mapWrapper :global(.leaflet-tile-pane img) {
+  filter: grayscale(1) contrast(1.15) brightness(0.88);
+}
+
+.mapWrapper :global(.leaflet-container) {
+  background: #2a2a2a;
+  font-family: inherit;
+}
+
+.mapWrapper :global(.leaflet-control-attribution) {
+  display: none !important;
+}
+
+.markerIconWrap {
+  background: transparent !important;
+  border: none !important;
+}
+
+.markerGroup {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+.markerPin {
+  flex-shrink: 0;
+  display: block;
+  filter: drop-shadow(0 2px 8px rgba(254, 154, 0, 0.45));
+}
+
+.markerLabel {
+  padding: 7px 14px;
+  background: #000;
+  border: 1px solid #fe9a00;
+  border-radius: 999px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.45);
+}

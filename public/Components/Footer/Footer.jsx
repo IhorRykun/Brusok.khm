@@ -12,56 +12,12 @@ import Link from "next/link";
 import { LiaMobileSolid } from "react-icons/lia";
 import { HiOutlineMail } from "react-icons/hi";
 import { TfiLocationPin } from "react-icons/tfi";
-import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
-import OptionsCarts from "../../../optionsMaps";
+import dynamic from "next/dynamic";
 
-const APY_keY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
-const containerStyle = {
-  width: 1216,
-  height: 452
-};
+const Map = dynamic(() => import("./Maps").then((mod) => mod.Map), {
+  ssr: false,
+});
 
-const mapOptions = {
-  disableDefaultUI: true, // прибрати всі стандартні кнопки
-
-  zoomControl: true, // залишити zoom + -
-  fullscreenControl: false,
-  streetViewControl: false,
-  mapTypeControl: false,
-
-  clickableIcons: false, // прибрати POI іконки
-  keyboardShortcuts: false,
-
-  styles: [
-    {
-      featureType: "poi",
-      stylers: [{ visibility: "off" }]
-    },
-    {
-      featureType: "transit",
-      stylers: [{ visibility: "off" }]
-    }
-  ]
-};
-
-const center = {
-  lat: 49.474933,
-  lng: 27.043817
-};
-
-export default function MapComponent() {
-  return (
-    <LoadScript googleMapsApiKey={APY_keY}>
-      <GoogleMap
-        mapContainerStyle={containerStyle}
-        center={center}
-        zoom={13}
-        options={OptionsCarts}>
-        <Marker position={center} />
-      </GoogleMap>
-    </LoadScript>
-  );
-}
 export const Footer = () => {
   return (
     <section className={styles.SectionFooter}>
@@ -141,8 +97,7 @@ export const Footer = () => {
                   href="https://www.instagram.com/brusok.khm/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={styles.social_link}
-                >
+                  className={styles.social_link}>
                   <IoLogoInstagram className={styles.socialSvg} />
                 </a>
               </li>
@@ -151,8 +106,7 @@ export const Footer = () => {
                   href="https://www.facebook.com/Brusok.khm/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={styles.social_link}
-                >
+                  className={styles.social_link}>
                   <FaFacebookF className={styles.socialSvg} />
                 </a>
               </li>
@@ -167,8 +121,7 @@ export const Footer = () => {
                   href="https://t.me/ihorrykun"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={styles.social_link}
-                >
+                  className={styles.social_link}>
                   <PiTelegramLogoFill className={styles.socialSvg} />
                 </a>
               </li>
@@ -178,7 +131,7 @@ export const Footer = () => {
         <div>
           <h3>Наше розташування</h3>
           <div>
-            <MapComponent />
+            <Map />
           </div>
         </div>
       </Container>
