@@ -234,3 +234,90 @@
   height: 16px;
   color: #fe9a00;
 }
+
+@media (min-width: 768px) and (max-width: 1280px) {
+  .sectionForm {
+    padding: 80px 0;
+  }
+
+  .Forma {
+    width: 100%;
+    padding: 32px;
+    margin-top: 40px;
+  }
+
+  .inputName,
+  .inputEmail,
+  .fieldGroup {
+    width: calc(50% - 12px);
+  }
+
+  .inputMobile,
+  .inputTexteria,
+  .fieldGroupFull,
+  .inputCheckBox {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 767px) {
+  .sectionForm {
+    padding: 56px 0;
+  }
+
+  .Forma {
+    width: 100%;
+    padding: 20px;
+    margin-top: 32px;
+  }
+
+  .formRow {
+    gap: 0;
+  }
+
+  .inputName,
+  .inputEmail,
+  .inputMobile,
+  .inputTexteria,
+  .fieldGroup,
+  .fieldGroupFull,
+  .inputCheckBox {
+    width: 100%;
+    max-width: 100%;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 320px) {
+  .sectionForm {
+    padding: 40px 0;
+  }
+
+  .Forma {
+    width: 100%;
+    padding: 16px;
+    margin-top: 24px;
+  }
+
+  .formRow {
+    gap: 0;
+  }
+
+  .inputName,
+  .inputEmail,
+  .inputMobile,
+  .inputTexteria,
+  .fieldGroup,
+  .fieldGroupFull,
+  .inputCheckBox {
+    width: 100%;
+    max-width: 100%;
+    margin-right: 0;
+  }
+
+  .ButtonForm {
+    width: 100%;
+    padding: 14px 16px;
+  }
+}

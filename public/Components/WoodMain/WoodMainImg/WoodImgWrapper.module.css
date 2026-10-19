@@ -1,8 +1,8 @@
 .woodImgWrapper {
-  background: linear-gradient(180deg, rgba(255, 251, 235, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  margin-top: 168px;
 }
 
-.woodImgWrapper ul {
+.woodImgWrapper > ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 32px;
@@ -11,6 +11,38 @@
   list-style: none;
 }
 
-.woodImgWrapper li {
+.woodImgWrapper > ul > li {
   list-style: none;
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+  .woodImgWrapper {
+    margin-top: 96px;
+  }
+
+  .woodImgWrapper > ul {
+    gap: 24px;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 767px) {
+  .woodImgWrapper {
+    margin-top: 56px;
+  }
+
+  .woodImgWrapper > ul {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+@media (max-width: 320px) {
+  .woodImgWrapper {
+    margin-top: 40px;
+  }
+
+  .woodImgWrapper > ul {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 }

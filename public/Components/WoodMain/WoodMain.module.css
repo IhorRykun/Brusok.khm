@@ -1,6 +1,11 @@
 .sectionMain {
-  padding: 100px 0;
-  background-color: rgba(255, 251, 235, 1);
+  padding: 126px 0 84px;
+  background: linear-gradient(180deg, #fffbeb 0%, #ffffff 46%, #ffffff 100%);
+}
+
+.layout {
+  width: min(1216px, calc(100% - 48px));
+  margin: 0 auto;
 }
 
 .mainWrapper {
@@ -8,15 +13,153 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 24px;
+  gap: 96px;
+}
+
+.mainWrapper h2 {
+  margin-bottom: 0;
+}
+
+.mainWrapper h2::before {
+  top: calc(100% + 36px);
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .mainText {
+  width: min(742px, 100%);
+  margin: 0;
   font-weight: 400;
   font-size: 18px;
   line-height: 29.25px;
   color: rgba(54, 65, 83, 1);
+}
 
-  width: 762px;
-  margin: 0 auto;
+.consult {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 160px;
+  text-align: center;
+}
+
+.consultTitle {
+  margin: 0;
+  color: #1e293b;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40px;
+}
+
+.consultText {
+  max-width: 680px;
+  margin: 12px 0 0;
+  color: #818993;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.consultButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 55px;
+  min-width: 235px;
+  margin-top: 32px;
+  padding: 0 28px;
+  border-radius: 999px;
+  background: #e17100;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.consultButton svg {
+  width: 18px;
+  height: 18px;
+}
+
+.consultButton:hover,
+.consultButton:focus-visible {
+  background: #c66100;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .consultButton {
+    transition: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+  .sectionMain {
+    padding: 88px 0 64px;
+  }
+
+  .layout {
+    width: min(1216px, calc(100% - 64px));
+  }
+
+  .consult {
+    margin-top: 96px;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 767px) {
+  .sectionMain {
+    padding: 56px 0 40px;
+  }
+
+  .layout {
+    width: calc(100% - 32px);
+  }
+
+  .mainWrapper {
+    gap: 40px;
+  }
+
+  .consult {
+    margin-top: 64px;
+  }
+
+  .consultTitle {
+    font-size: 26px;
+    line-height: 32px;
+  }
+}
+
+@media (max-width: 320px) {
+  .sectionMain {
+    padding: 40px 0 32px;
+  }
+
+  .layout {
+    width: calc(100% - 24px);
+  }
+
+  .mainWrapper {
+    gap: 28px;
+  }
+
+  .mainText {
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  .consult {
+    margin-top: 48px;
+  }
+
+  .consultTitle {
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  .consultButton {
+    min-width: 0;
+    width: 100%;
+  }
 }

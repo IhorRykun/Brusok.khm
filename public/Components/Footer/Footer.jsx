@@ -77,7 +77,13 @@ export const Footer = () => {
                     left: 0
                   }}
                 />
-                +38 (097) 77 28 371 <br /> +38 (097) 87 49 673
+                <a className={styles.phoneLink} href="tel:+380977728371">
+                  +38 (097) 77 28 371
+                </a>
+                <br />
+                <a className={styles.phoneLink} href="tel:+380978749673">
+                  +38 (097) 87 49 673
+                </a>
               </li>
               <li>
                 <address className={styles.itemContact_address}>
@@ -91,7 +97,13 @@ export const Footer = () => {
                       left: 0
                     }}
                   />
-                  c. Лісові Гринівці, вул. Центральнавул. Центральна
+                  <a
+                    className={styles.mapLink}
+                    href="https://www.google.com/maps/search/?api=1&query=49.474933,27.043817"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    c. Лісові Гринівці, вул. Центральнавул. Центральна
+                  </a>
                 </address>
               </li>
               <li className={styles.itemContact_email}>
@@ -105,7 +117,9 @@ export const Footer = () => {
                     left: 0
                   }}
                 />
-                brusok.khm@gmail.com
+                <a className={styles.mailLink} href="mailto:brusok.khm@gmail.com">
+                  brusok.khm@gmail.com
+                </a>
               </li>
             </ul>
           </div>
@@ -148,11 +162,9 @@ export const Footer = () => {
             </ul>
           </div>
         </div>
-        <div>
-          <h3>Наше розташування</h3>
-          <div>
-            <Map />
-          </div>
+        <div className={styles.mapBlock}>
+          <h3 className={styles.mapTitle}>Наше розташування</h3>
+          <Map />
         </div>
       </Container>
     </section>

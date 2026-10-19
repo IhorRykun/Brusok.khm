@@ -27,3 +27,28 @@
   line-height: 24px;
   color: rgba(87, 83, 77, 1);
 }
+
+@media (max-width: 1280px) {
+  .Wrapper {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .AboutBottomH3 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+}
+
+@media (max-width: 320px) {
+  .Wrapper {
+    padding: 16px;
+  }
+
+  .AboutBottomH3 {
+    font-size: 28px;
+    line-height: 32px;
+  }
+}

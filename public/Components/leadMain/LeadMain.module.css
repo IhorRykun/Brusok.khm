@@ -1,8 +1,36 @@
 .mainContainer {
-  background-image: url("../../../img//main_back.jpg");
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   padding: 221px 0;
+}
+
+.mainContainer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: url("../../../img/main_back.jpg");
   background-size: cover;
   background-position: center;
+  transform-origin: center;
+  animation: bannerZoom 22s ease-out forwards;
+}
+
+@keyframes bannerZoom {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.08);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mainContainer::before {
+    animation: none;
+  }
 }
 
 .mainTitle {
@@ -67,4 +95,74 @@
 .mainButton:hover .mainButtonArrow {
   color: #fe9a00;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+  .mainContainer {
+    padding: 140px 0;
+  }
+
+  .mainTitle,
+  .mainTitle3,
+  .mainText {
+    width: 100%;
+    max-width: 751px;
+  }
+
+  .mainTitle3 {
+    font-size: 64px;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 767px) {
+  .mainContainer {
+    padding: 72px 0;
+  }
+
+  .mainTitle,
+  .mainTitle3,
+  .mainText {
+    width: 100%;
+  }
+
+  .mainTitle3 {
+    font-size: 40px;
+  }
+
+  .mainText {
+    font-size: 16px;
+  }
+
+  .mainButton {
+    margin-top: 32px;
+  }
+}
+
+@media (max-width: 320px) {
+  .mainContainer {
+    padding: 48px 0;
+  }
+
+  .mainTitle,
+  .mainTitle3,
+  .mainText {
+    width: 100%;
+  }
+
+  .mainTitle {
+    font-size: 13px;
+  }
+
+  .mainTitle3 {
+    font-size: 32px;
+  }
+
+  .mainText {
+    font-size: 15px;
+  }
+
+  .mainButton {
+    margin-top: 24px;
+    padding: 12px 20px;
+  }
 }

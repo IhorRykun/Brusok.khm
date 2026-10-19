@@ -14,12 +14,57 @@
   content: "";
   display: block;
   position: absolute;
-  /* top: 202px;
-  left: 678px; */
   top: 160%;
-  left: 46%;
-  transform: rotate(-45%, -45%);
+  left: 50%;
   width: 96px;
   height: 4px;
   background-color: #e17100;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+}
+
+.sectionTitleShown::before {
+  animation: titleLine 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes titleLine {
+  from {
+    transform: translateX(-50%) scaleX(0);
+  }
+
+  to {
+    transform: translateX(-50%) scaleX(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sectionTitleH2::before {
+    transform: translateX(-50%) scaleX(1);
+    animation: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+  .sectionTitleH2 {
+    font-size: 40px;
+    line-height: 44px;
+    margin-bottom: 64px;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 767px) {
+  .sectionTitleH2 {
+    font-size: 32px;
+    line-height: 36px;
+    margin-bottom: 48px;
+  }
+}
+
+@media (max-width: 320px) {
+  .sectionTitleH2 {
+    font-size: 26px;
+    line-height: 30px;
+    margin-bottom: 36px;
+    letter-spacing: 0.4px;
+  }
 }

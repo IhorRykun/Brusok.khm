@@ -21,3 +21,48 @@
   left: 122px;
   width: 672px;
 }
+
+@media (min-width: 768px) and (max-width: 1280px) {
+  .divContainerService {
+    left: 32px;
+    width: min(672px, calc(100% - 64px));
+  }
+}
+
+@media (min-width: 321px) and (max-width: 767px) {
+  .divContainerService {
+    left: 16px;
+    bottom: 12px;
+    width: calc(100% - 32px);
+  }
+
+  .serviceTitle {
+    font-size: 22px;
+    line-height: 28px;
+    margin-bottom: 8px;
+  }
+
+  .serviceText {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 320px) {
+  .divContainerService {
+    left: 12px;
+    bottom: 10px;
+    width: calc(100% - 24px);
+  }
+
+  .serviceTitle {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 6px;
+  }
+
+  .serviceText {
+    font-size: 13px;
+    line-height: 1.35;
+  }
+}

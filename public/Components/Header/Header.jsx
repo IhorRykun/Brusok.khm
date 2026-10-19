@@ -20,7 +20,7 @@ export const Header = () => {
             <Link href="/works" className={styles.headerLink}>
               <li className={styles.headerItem}>Покрівельні роботи</li>
             </Link>
-            <Link href="delivery" className={styles.headerLink}>
+            <Link href="/delivery" className={styles.headerLink}>
               <li className={styles.headerItem}>Доставка</li>
             </Link>
           </ul>

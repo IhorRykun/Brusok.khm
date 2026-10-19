@@ -1,9 +1,9 @@
 import styles from "./AboutMe.module.css";
 import { ContainerMeImg } from "./AboutMeImg/AboutMeImg";
-import img_1 from "../../../img/about/img_1 x1.jpg";
-import img_2 from "../../../img/about/img_2 x1.jpg";
-import img_3 from "../../../img/about/img_3 x1.jpg";
-import img_4 from "../../../img/about/img_4 x1.jpg";
+import img_1 from "../../../img/about/img_1 x2.jpg";
+import img_2 from "../../../img/about/img_2 x2.jpg";
+import img_3 from "../../../img/about/img_3 x2.jpg";
+import img_4 from "../../../img/about/img_4 x2.jpg";
 
 import { PiMedalThin } from "react-icons/pi";
 import { LuDollarSign } from "react-icons/lu";

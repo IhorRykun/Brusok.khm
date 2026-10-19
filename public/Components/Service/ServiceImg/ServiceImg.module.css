@@ -1,12 +1,31 @@
 .ServiceContainer {
   position: relative;
+  overflow: hidden;
+  border-radius: 24px;
 }
 
 .imgService {
   width: 100%;
   max-width: 1216px;
   height: auto;
-  border-radius: 24px;
   margin: 0 auto;
   display: block;
+  transform-origin: center;
+  animation: bannerZoom 22s ease-out forwards;
+}
+
+@keyframes bannerZoom {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.08);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .imgService {
+    animation: none;
+  }
 }

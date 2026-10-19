@@ -1,6 +1,7 @@
 .imgMe {
   width: 592px;
   height: 256px;
+  object-fit: cover;
   border-radius: 24px;
   transition: transform 240ms cubic-bezier(.2,.8,.2,1), box-shadow 240ms ease;
   transform-origin: center;
@@ -94,4 +95,56 @@
 }
 .divMeImg:nth-child(4) .divSvg {
   background-color: rgba(152, 16, 250, 1);
+}
+
+@media (max-width: 1280px) {
+  .imgMe,
+  .divMeImg {
+    width: 100%;
+  }
+
+  .imgMeText {
+    width: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .imgMe {
+    height: 200px;
+  }
+
+  .imgTitle {
+    bottom: 206px;
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .imgMeText {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 320px) {
+  .imgMe {
+    height: 168px;
+  }
+
+  .imgTitle {
+    bottom: 174px;
+    left: 16px;
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .divSvg {
+    width: 48px;
+    height: 48px;
+    top: 12px;
+    left: 12px;
+  }
+
+  .imgMeText {
+    padding: 16px;
+    font-size: 15px;
+  }
 }
