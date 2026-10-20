@@ -1,7 +1,10 @@
+import type { Metadata } from "next";
+import { Header } from "../public/Components/Header/Header";
+
+export const metadata: Metadata = {
+  title: "BRUSOK",
+};
+
 export default function Home() {
-  return (
-    <>
-      <h2>Hello</h2>
-    </>
-  );
+  return <Header />;
 }
