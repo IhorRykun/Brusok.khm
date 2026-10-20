@@ -8,6 +8,7 @@ import { FaTiktok } from "react-icons/fa";
 
 import { Container } from "../Container/Container";
 import Link from "next/link";
+import { NavLink } from "../NavLink/NavLink";
 
 import { LiaMobileSolid } from "react-icons/lia";
 import { HiOutlineMail } from "react-icons/hi";
@@ -36,27 +37,43 @@ export const Footer = () => {
             <h3 className={styles.divContainerFlex_second_Title}>Навігація</h3>
             <ul className={styles.AboutList}>
               <li>
-                <Link href="/about" className={styles.AboutItem}>
+                <NavLink
+                  href="/"
+                  className={styles.AboutItem}
+                  activeClassName={styles.AboutItemActive}
+                >
                   Про нас
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link href="/wood" className={styles.AboutItem}>
+                <NavLink
+                  href="/wood"
+                  className={styles.AboutItem}
+                  activeClassName={styles.AboutItemActive}
+                >
                   Пиломатеріали
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link href="/works" className={styles.AboutItem}>
+                <NavLink
+                  href="/works"
+                  className={styles.AboutItem}
+                  activeClassName={styles.AboutItemActive}
+                >
                   Покрівельні роботи
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link href="/delivery" className={styles.AboutItem}>
+                <NavLink
+                  href="/delivery"
+                  className={styles.AboutItem}
+                  activeClassName={styles.AboutItemActive}
+                >
                   Доставка
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link href="/about#footer" className={styles.AboutItem}>
+                <Link href="/#footer" className={styles.AboutItem}>
                   Контакти
                 </Link>
               </li>
@@ -102,7 +119,8 @@ export const Footer = () => {
                     href="https://www.google.com/maps/search/?api=1&query=49.474933,27.043817"
                     target="_blank"
                     rel="noopener noreferrer">
-                    c. Лісові Гринівці, вул. Центральнавул. Центральна
+                    <span className={styles.addressLine}>с. Лісові Гринівці,</span>
+                    <span className={styles.addressLine}>вул. Центральна</span>
                   </a>
                 </address>
               </li>

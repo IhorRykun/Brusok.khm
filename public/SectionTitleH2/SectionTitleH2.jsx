@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./SectionTitleH2.module.css";
 
-export const SectionTitleH2 = ({ children }) => {
+export const SectionTitleH2 = ({ children, sentence = false }) => {
   const ref = useRef(null);
   const [shown, setShown] = useState(false);
 
@@ -28,11 +28,13 @@ export const SectionTitleH2 = ({ children }) => {
     <div>
       <h2
         ref={ref}
-        className={
-          shown
-            ? `${styles.sectionTitleH2} ${styles.sectionTitleShown}`
-            : styles.sectionTitleH2
-        }>
+        className={[
+          styles.sectionTitleH2,
+          sentence ? styles.sentence : "",
+          shown ? styles.sectionTitleShown : "",
+        ]
+          .filter(Boolean)
+          .join(" ")}>
         {children}
       </h2>
     </div>

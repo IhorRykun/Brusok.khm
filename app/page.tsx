@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Header } from "../public/Components/Header/Header";
+import { AboutPages } from "../public/pages/AboutPages/AboutPages";
 
 export const metadata: Metadata = {
   title: "BRUSOK",
 };
 
 export default function Home() {
-  return <Header />;
+  return <AboutPages />;
 }

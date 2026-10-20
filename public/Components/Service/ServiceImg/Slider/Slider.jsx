@@ -1,7 +1,7 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { ServiceImg } from "../ServiceImg";
 import styles from "./Slider.module.css";
 
@@ -13,12 +13,18 @@ export const Slider = ({ slides }) => {
   return (
     <Swiper
       className={styles.slider}
-      modules={[Navigation, Pagination]}
+      modules={[Navigation, Pagination, Autoplay]}
       slidesPerView={1}
       spaceBetween={24}
+      speed={800}
       pagination={{ clickable: true }}
       navigation
       loop
+      autoplay={{
+        delay: 4000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      }}
     >
       {slides.map((slide) => (
         <SwiperSlide key={slide.alt} className={styles.slide}>

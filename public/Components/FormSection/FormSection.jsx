@@ -14,37 +14,45 @@ import {
   isContactFormValid,
 } from "../../../lib/contactValidation";
 
+const ROOFING_PHONE = "+380978749673";
+
 const FieldError = ({ name, touched, errors }) => {
   return touched[name] && errors[name] ? (
     <p className={styles.fieldError}>{errors[name]}</p>
   ) : null;
 };
 
+function buildSmsLink(values) {
+  const text = [
+    `Ім'я: ${values.name.trim()}`,
+    `Email: ${values.email.trim()}`,
+    `Телефон: ${values.tel.trim()}`,
+    "",
+    values.userText?.trim() || "(повідомлення не вказано)",
+  ].join("\n");
+
+  const isApple = /iPad|iPhone|iPod/i.test(navigator.userAgent);
+  const separator = isApple ? "&" : "?";
+
+  return `sms:${ROOFING_PHONE}${separator}body=${encodeURIComponent(text)}`;
+}
+
 export const FormSection = () => {
-  const handleSubmit = async (values, { setSubmitting, resetForm, setStatus }) => {
+  const handleSubmit = (values, { setSubmitting, resetForm, setStatus }) => {
     setStatus(null);
 
     try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(values),
+      window.location.href = buildSmsLink(values);
+      resetForm({
+        values: contactFormInitialValues,
+        status: {
+          success:
+            "Відкрито повідомлення на +38 (097) 87 49 673. Підтвердьте відправку у телефоні.",
+        },
       });
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        setStatus({
-          error: data.message || "Не вдалося надіслати повідомлення. Спробуйте пізніше.",
-        });
-        return;
-      }
-
-      setStatus({ success: "Дякуємо! Ваше повідомлення надіслано." });
-      resetForm();
     } catch {
       setStatus({
-        error: "Не вдалося надіслати повідомлення. Перевірте з'єднання та спробуйте ще раз.",
+        error: "Не вдалося відкрити повідомлення. Зателефонуйте на +38 (097) 87 49 673.",
       });
     } finally {
       setSubmitting(false);

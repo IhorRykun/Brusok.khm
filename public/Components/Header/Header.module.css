@@ -7,65 +7,50 @@
   align-items: center;
 }
 
+.headerBrand {
+  color: #0a0a0a;
+  text-decoration: none;
+}
+
 .headerTitle {
-  font-size: 40px;
-  font-weight: bold;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
 }
 
 .headerList {
   display: flex;
-  color: #364153;
-  letter-spacing: 0.7;
-  font-size: 20px;
+  align-items: center;
+  gap: 32px;
+  color: #57534d;
+  letter-spacing: 0.8px;
+  font-size: 13px;
+  text-transform: uppercase;
   font-family: Arial, Helvetica, sans-serif;
   margin-left: auto;
 }
 
 .headerLink {
-  margin-right: 30px;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.headerLink:last-child {
-  margin-right: 0;
-}
-
-.headerLink {
-  position: relative;
-  color: #364153;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-
-.headerLink {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-
-  padding: 14px 22px;
-
-  background: rgba(255, 255, 255, 0.03);
-
-  border: 1px solid rgba(255, 255, 255, 0.08);
-
-  border-radius: 18px;
-
-  backdrop-filter: blur(10px);
-
-  transition: all 0.3s ease;
+  color: #57534d;
+  text-decoration: none;
+  font-weight: 500;
+  background: none;
+  border: 0;
+  padding: 0;
+  border-radius: 0;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.headerLinkActive,
 .headerLink:hover,
 .headerLink:focus-visible {
-  border-color: rgba(255, 184, 0, 0.5);
-
-  background: rgba(255, 184, 0, 0.08);
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-
-  transform: translateY(-3px);
-  color:#fe9a00
+  color: #e17100;
+  background: none;
+  border: 0;
+  box-shadow: none;
+  transform: none;
 }
 
 @media (min-width: 768px) and (max-width: 1280px) {
@@ -85,10 +70,9 @@
     margin-left: auto;
   }
 
-  .headerLink {
-    margin-right: 0;
-    padding: 10px 14px;
-    font-size: 16px;
+  .headerList {
+    gap: 20px;
+    font-size: 12px;
   }
 }
 
@@ -114,11 +98,9 @@
     margin-left: 0;
   }
 
-  .headerLink {
-    margin-right: 0;
-    justify-content: center;
-    padding: 10px 14px;
-    font-size: 16px;
+  .headerList {
+    align-items: center;
+    font-size: 13px;
   }
 }
 
@@ -144,12 +126,9 @@
     margin-left: 0;
   }
 
-  .headerLink {
-    margin-right: 0;
-    justify-content: center;
-    padding: 8px 10px;
-    font-size: 14px;
-    border-radius: 14px;
+  .headerList {
+    align-items: center;
+    font-size: 12px;
   }
 }
 

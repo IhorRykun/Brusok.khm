@@ -4,14 +4,14 @@
 }
 
 .textAbout {
-  width: 668px;
+  width: 560px;
   display: block;
-  margin-bottom: 68px;
-  font-size: 18px;
-  line-height: 28px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #57534d;
   text-align: center;
-  margin: 0 auto;
-  padding: 32px 0;
+  margin: 8px auto 28px;
+  padding: 0;
 }
 
 .divContainerGap {
@@ -44,7 +44,7 @@
 
   .textAbout {
     width: 100%;
-    padding: 20px 0;
+    margin-bottom: 20px;
   }
 
   .divContainerGap,
@@ -65,9 +65,7 @@
 
   .textAbout {
     width: 100%;
-    font-size: 16px;
-    line-height: 24px;
-    padding: 16px 0;
+    margin-bottom: 16px;
   }
 
   .divContainerGap,

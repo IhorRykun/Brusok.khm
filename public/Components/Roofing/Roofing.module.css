@@ -509,7 +509,21 @@
   .reasonGrid,
   .reasonGridBottom,
   .priceGrid {
+    display: grid;
     grid-template-columns: 1fr;
+  }
+
+  .reasonGridBottom .reason {
+    width: auto;
+  }
+
+  .reasonIcon {
+    right: 12px;
+    bottom: 12px;
+  }
+
+  .reason h3 {
+    margin-top: 16px;
   }
 }
 
@@ -550,11 +564,25 @@
   .reasonGrid,
   .reasonGridBottom,
   .priceGrid {
+    display: grid;
     grid-template-columns: 1fr;
+  }
+
+  .reasonGridBottom .reason {
+    width: auto;
   }
 
   .reasonPhoto {
     height: 140px;
+  }
+
+  .reasonIcon {
+    right: 10px;
+    bottom: 10px;
+  }
+
+  .reason h3 {
+    margin-top: 14px;
   }
 }
 

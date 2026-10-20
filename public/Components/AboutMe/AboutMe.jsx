@@ -17,7 +17,7 @@ export const AboutMe = () => {
   return (
     <section className={styles.sectionAboutMe}>
       <Container>
-        <SectionTitleH2>Чому варто обрати нас</SectionTitleH2>
+        <SectionTitleH2 sentence>Чому варто обрати нас</SectionTitleH2>
         <p className={styles.textAbout}>
           Ми поєднуємо найкращі традиції якості з сучасним підходом до
           обслуговування клієнтів
@@ -27,18 +27,7 @@ export const AboutMe = () => {
             props={img_1}
             children={"Висока якість матеріалів"}
             style={{ backgroundColor: "blue" }}
-            bottomChild={
-              <PiMedalThin
-                style={{
-                  width: "32",
-                  height: "32",
-                  position: "absolute",
-                  top: "16",
-                  left: "16",
-                  color: "white"
-                }}
-              />
-            }
+            bottomChild={<PiMedalThin />}
             topChild={
               "Використовуємо ретельно відібрані сорти деревини, які проходять строгий контроль на кожному етапі обробки. Матеріали стійкі до зносу, зберігають природну красу та текстуру деревини, що гарантує надійність і довговічність кожного виробу."
             }
@@ -47,18 +36,7 @@ export const AboutMe = () => {
           <ContainerMeImg
             props={img_2}
             children={"Конкурентні ціни"}
-            bottomChild={
-              <LuDollarSign
-                style={{
-                  width: "32",
-                  height: "32",
-                  position: "absolute",
-                  top: "16",
-                  left: "16",
-                  color: "white"
-                }}
-              />
-            }
+            bottomChild={<LuDollarSign />}
             topChild={
               "Завдяки прямій співпраці з постачальниками, ми можемо зберігати вигідні умови для наших клієнтів, забезпечуючи відмінне співвідношення ціни і якості."
             }
@@ -67,18 +45,7 @@ export const AboutMe = () => {
           <ContainerMeImg
             props={img_3}
             children={"Оперативна доставка"}
-            bottomChild={
-              <TbTruckDelivery
-                style={{
-                  width: "32",
-                  height: "32",
-                  position: "absolute",
-                  top: "16",
-                  left: "16",
-                  color: "white"
-                }}
-              />
-            }
+            bottomChild={<TbTruckDelivery />}
             topChild={
               "Ми цінуємо ваш час, тому організовуємо швидку та надійну доставку. Ваше замовлення буде доставлено в найкоротші терміни без затримок, незалежно від обсягу та віддаленості місця доставки."
             }
@@ -87,18 +54,7 @@ export const AboutMe = () => {
           <ContainerMeImg
             props={img_4}
             children={"Наша місія"}
-            bottomChild={
-              <PiSpiralThin
-                style={{
-                  width: "32",
-                  height: "32",
-                  position: "absolute",
-                  top: "16",
-                  left: "16",
-                  color: "white"
-                }}
-              />
-            }
+            bottomChild={<PiSpiralThin />}
             topChild={
               "Наша місія — забезпечити клієнтів якісними та надійними матеріалами, які відповідають найвищим стандартам, за доступними цінами. Завдяки професійному підходу, індивідуальному сервісу та швидкій доставці, Brusok є надійним партнером у світі пиломатеріалів."
             }

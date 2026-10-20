@@ -271,11 +271,8 @@ export const Delivery = () => {
           </h2>
           <p>Наші менеджери допоможуть вибрати оптимальний транспорт та розрахують точну вартість</p>
           <div className={styles.phones}>
-            <a href="tel:+380977728371">
-              <PhoneIcon /> +38 (097) 77 28 371
-            </a>
-            <a href="tel:+380978749673">
-              <PhoneIcon /> +38 (097) 87 49 673
+            <a href="tel:+380670774979">
+              <PhoneIcon /> +38 (067) 077 49 79
             </a>
           </div>
         </Container>

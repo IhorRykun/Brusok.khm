@@ -1,0 +1,95 @@
+.button {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 40;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  padding: 0;
+  border: 1px solid rgba(255, 184, 0, 0.55);
+  border-radius: 18px;
+  background: #fe9a00;
+  color: #1a1a1a;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  transform: translateY(22px);
+  pointer-events: none;
+  transition:
+    opacity 0.45s ease,
+    transform 0.55s ease,
+    background 0.25s ease;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.icon {
+  display: inline-flex;
+  color: #fff;
+}
+
+.icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+.visible .icon {
+  animation: rise 1.6s ease-in-out infinite;
+}
+
+@keyframes rise {
+  0%,
+  100% {
+    transform: translateY(4px);
+  }
+
+  55% {
+    transform: translateY(-7px);
+  }
+}
+
+.button:hover,
+.button:focus-visible {
+  background: #ffb000;
+}
+
+.visible:hover,
+.visible:focus-visible {
+  transform: translateY(-3px);
+}
+
+.button:focus-visible {
+  outline: 2px solid #fe9a00;
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button,
+  .visible,
+  .visible:hover,
+  .visible:focus-visible {
+    transition: none;
+    transform: none;
+  }
+
+  .visible .icon {
+    animation: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .button {
+    right: 16px;
+    bottom: 16px;
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+  }
+}

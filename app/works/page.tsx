@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Footer } from "../../public/Components/Footer/Footer";
-import { FormSection } from "../../public/Components/FormSection/FormSection";
+import { ContactCta } from "../../public/Components/ContactCta/ContactCta";
 import { Header } from "../../public/Components/Header/Header";
 import { Roofing } from "../../public/Components/Roofing/Roofing";
 
@@ -15,7 +15,7 @@ export default function Works() {
     <>
       <Header />
       <Roofing />
-      <FormSection />
+      <ContactCta />
       <Footer />
     </>
   );
